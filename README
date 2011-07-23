@@ -1,0 +1,39 @@
+wp_footbo
+=========
+
+is a plugin for wordpress that let's you specify a shortcode for including
+football tables and fixtures in your blog posts or wherever.
+
+shortcode form:
+===============
+
+FOR LEAGUES
+***********
+[footbo type="league" name="Bundesliga"]
+
+to get the league name go to
+http://www.footbo.com/Leagues
+and hover over the league you want to include and see the status bar
+where it says like
+http://www.footbo.com/Leagues/Bundeliga
+
+in general:
+http://www.footbo.com/Leagues/<league name>
+
+FOR FIXTURES (the latest ones)
+************
+[footbo type="fixture" name="Liverpool"]
+
+go to 
+http://www.footbo.com/Teams
+search your team and click it
+check URL field, so something like that:
+
+http://www.footbo.com/Teams/Manchester_United
+
+FOR FIXTURES ( all )
+************
+
+same stuff except
+[footbo type="fixture_all" name="Liverpool"]
+
