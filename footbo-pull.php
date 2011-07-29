@@ -77,7 +77,6 @@ function footbo_plugin_options() {
     </form>
   </div>
 
-
 <?php  
 }
 
@@ -96,6 +95,7 @@ function cache_field_sanitize($input) {
   }
   return $val; 
 }
+
 
 // deactivation hook
 register_deactivation_hook( __FILE__, 'footbo_deactivate_func' );
