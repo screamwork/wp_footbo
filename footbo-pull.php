@@ -100,5 +100,12 @@ function cache_field_sanitize($input) {
 // deactivation hook
 register_deactivation_hook( __FILE__, 'footbo_deactivate_func' );
 function footbo_deactivate_func() {
+  global $wpdb;
   delete_option('footbo-field-cache');
+  $wpdb->query("DELETE FROM $wpdb->options WHERE option_name like '_transient_league_%'");
+  $wpdb->query("DELETE FROM $wpdb->options WHERE option_name like '_transient_fixture_%'");
+  $wpdb->query("DELETE FROM $wpdb->options WHERE option_name like '_transient_fixture_all_%'");
+  $wpdb->query("DELETE FROM $wpdb->options WHERE option_name like '_transient_timeout_league_%'");
+  $wpdb->query("DELETE FROM $wpdb->options WHERE option_name like '_transient_timeout_fixture_%'");
+  $wpdb->query("DELETE FROM $wpdb->options WHERE option_name like '_transient_timeout_fixture_all_%'");
 }
