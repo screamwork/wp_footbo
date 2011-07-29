@@ -96,3 +96,9 @@ function cache_field_sanitize($input) {
   }
   return $val; 
 }
+
+// deactivation hook
+register_deactivation_hook( __FILE__, 'footbo_deactivate_func' );
+function footbo_deactivate_func() {
+  delete_option('footbo-field-cache');
+}
